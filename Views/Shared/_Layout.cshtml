@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"]</title>
+        <script src="https://kit.fontawesome.com/70a6c089f6.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="header__titulo" id="titulo__izquierda">DIARCO</h1>
+            <img src="~/assets/escudo.png" class="header__img"/>
+            <h1 class="header__titulo" id="titulo__derecha">UNITED</h1>
+        </header>
+
+        <nav class="nav">
+            <ul class="menu">
+                <a href="#"><li class="menu__item">Equipo</li></a>
+                <a href="#"><li class="menu__item">Torneo</li></a>
+                <a href="#"><li class="menu__item">Estadisticas</li></a>
+                <a href="#"><li class="menu__item">Historial</li></a>         
+            </ul>
+            <div class="menu__botones">
+                <a href="#"><button class="menu__boton" id="miDiarco"><i class="fa-solid fa-id-card"></i>Mi Diarco</button></a>
+                <a href="#"><button class="menu__boton" id="tienda"><i class="fa-solid fa-cart-shopping"></i>Tienda</button></a>
+            </div>
+        </nav>  
+
+        <div>
+            @RenderBody()
+        </div>
+
+        <footer class="footer">
+            <img src="~/assets/escudo.png" class="footer__img"/>
+            
+            <div class="footer__frases"> 
+                <h3 class="footer__titulo">#SOYDIARCO</h3>
+                <h3 class="footer__titulo">#ELMASGRANDE</h3>
+            </div>
+
+            <div class="footer__iconos"> 
+                <a href="#"><i class="fa-brands fa-instagram footer__icono"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter footer__icono"></i></a>
+                <a href="#"><i class="fa-regular fa-envelope footer__icono"></i></a>
+            </div>
+
+        </footer>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @await RenderSectionAsync("Scripts", required: false)
+    </body>
+</html>
