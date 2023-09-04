@@ -25,7 +25,7 @@ a{
 
 body{
   font-family: 'Maven Pro', sans-serif;
-  background-color: #fbfbfb;
+  background-color: #f7f7f7;
 }
 
 
@@ -115,7 +115,6 @@ body{
 }
 
 .footer{
-  margin-top: 40.9rem;
   background-color: #000;
   position: relative;
   color: #fbfbfb;
@@ -166,4 +165,112 @@ body{
   height: 50rem;
   margin: auto;
   display: block;
+}
+
+.home__partido{
+  display: flex;
+  padding: 10rem 0;
+}
+
+.proximo{
+  text-align: center;
+}
+
+.proximo__titulo{
+  font-size: 2.8rem;
+  margin-bottom: 3rem;
+  color: var(--oscuro);
+}
+
+.proximo__img{
+  width: 15%;
+}
+
+.proximo-datos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.proximo-datos__titulos{
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--principal);
+}
+
+.proximo-datos__titulo{
+  font-weight: 500;
+}
+
+.proximo-datos__boton{
+  text-transform: uppercase;
+  font-family: 'Maven Pro', sans-serif;
+  background-color: var(--principal);
+  color: var(--amarillo);
+  font-size: 2.1rem;
+  font-weight: 500;
+  padding: 1rem 6rem;
+  outline: none;
+  border: none;
+  border-radius: 12px;
+  box-shadow: inset 7px 7px 5px #0003;
+  cursor: pointer;
+}
+
+.home__carrusel{
+  margin: 5rem;
+  margin-bottom: 30rem;
+}
+
+.home__carrusel img{
+  width: 100%;
+}
+
+.home__ultimos{
+  width: 60%;
+  margin: auto;
+  margin-bottom: 30rem;
+}
+
+.ultimos__titulo{
+  font-size: 2.8rem;
+  background-color: var(--oscuro);
+  color: #f7f7f7;
+  padding: 2rem;
+  border-radius: 4px;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.ultimos__fecha{
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.ultimos__partido{
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--oscuro);
+  width: 90%;
+  margin: auto;
+  margin-bottom: 3rem;
+}
+
+.partido__tifa{
+  width: 7rem;
+  border-right: 2px solid #f7f7f7;
+}
+
+.partido__equipos{
+  display: flex;
+  font-size: 2.3rem;
+  width: 85%;
+  color: #fbfbfb;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.partido__img{
+  width: 6rem;
 }
