@@ -26,6 +26,7 @@ a{
 body{
   font-family: 'Maven Pro', sans-serif;
   background-color: #f7f7f7;
+  position: relative;
 }
 
 
@@ -236,7 +237,8 @@ body{
   height: 60rem;
 }
 
-.carousel-item img{
+.carousel__jugador{
+  background-color: var(--oscuro);
   height: 60rem;
 }
 
@@ -290,4 +292,67 @@ body{
 
 .partido__img{
   width: 6rem;
+}
+
+.hidden{
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+
+/* POPUP */
+
+.index__popup{
+  background-color: var(--oscuro);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+
+.popup__titulo{
+  color: #fbfbfb;
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 3rem;
+}
+
+.popup__contador{
+  display: flex;
+
+}
+
+.contador__cuadrado{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contador__hora{
+  background-color: var(--claro);
+  width: 10rem;
+  height: 10rem;
+  border-radius: 8px;
+  font-size: 4rem;
+  color: var(--amarillo);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+
+.contador__hora:not(:last-child){
+  margin-right: 3rem;
+}
+
+.contador__titulo{
+  color: #fbfbfb;
+  font-size: 1.7rem;
+  font-weight: 600;
+
+}
+
+.popup__img{
+  width: 15%;
 }
