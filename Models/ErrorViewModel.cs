@@ -1,4 +1,4 @@
-namespace TPBase.Models;
+namespace Diarco.Models;
 
 public class ErrorViewModel
 {

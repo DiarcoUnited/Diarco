@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace TPBase.Controllers;
+namespace Diarco.Controllers;
 
 public class HomeController : Controller
 {
