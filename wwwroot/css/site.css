@@ -356,3 +356,103 @@ body{
 .popup__img{
   width: 15%;
 }
+
+
+/* EQUIPO */
+
+.equipo{
+}
+
+.equipo__titulo{
+  z-index: 10;
+  color: #000;
+  text-align: center !important;
+  position: relative;
+  font-size: 3rem;
+}
+
+.equipo__edit{
+  width: 100%;
+  height: 20rem;
+}
+
+.equipo__alineacion--derecha{
+  width: 100%;
+  background-color: var(--oscuro);
+  height: 10rem;
+  clip-path: polygon(0 0, 100% 40%, 100% 100%, 0 100%);
+  /* polygon(0 0, 100% 0, 100% 60%, 0 100%) */
+}
+
+.equipo__alineacion--izquierda{
+  width: 100%;
+  background-color: var(--oscuro);
+  height: 10rem;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 60%);
+  /*  */
+}
+
+.equipo__carta--fondo{
+  background-color: var(--oscuro);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.equipo__carta{
+  border: 1px solid var(--amarillo-oscuro);
+
+}
+
+.equipo__carta--img{
+  width: 60%;
+}
+
+
+/*Tienda*/
+.carousel-item{
+  display: flex;
+  justify-content: space-between;
+
+}
+.card{
+  display: flex;
+  justify-content: center;
+
+}
+
+.cards_tienda{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.card_tienda{
+  height: 50rem;
+  width: 40rem;
+}
+
+
+
+
+
+
+
+/*Torneo*/
+ table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .banner {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
