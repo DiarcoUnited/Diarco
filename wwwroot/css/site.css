@@ -119,6 +119,7 @@ body{
 }
 
 .footer{
+  margin-top: 40rem;
   background-color: #000;
   position: relative;
   color: #fbfbfb;
@@ -379,16 +380,16 @@ body{
 .equipo__alineacion--derecha{
   width: 100%;
   background-color: var(--oscuro);
-  height: 10rem;
-  clip-path: polygon(0 0, 100% 40%, 100% 100%, 0 100%);
+  height: 25rem;
+  clip-path: polygon(0 0, 100% 90%, 100% 100%, 0 100%);
   /* polygon(0 0, 100% 0, 100% 60%, 0 100%) */
 }
 
 .equipo__alineacion--izquierda{
   width: 100%;
   background-color: var(--oscuro);
-  height: 10rem;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 60%);
+  height: 25rem;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 10%);
   /*  */
 }
 
@@ -397,46 +398,69 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .equipo__carta{
   border: 1px solid var(--amarillo-oscuro);
+  background-color: var(--oscuro);
+  width: 16%;
+  text-align: center;
+  padding: 3rem;
+  padding-bottom: 1.5rem;
+  border-radius: 15px;
+  position: absolute;
+  z-index: 10;
+}
 
+.carta__cuerpo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carta__nombres{
+  text-align: start;
+}
+.carta__nombre{
+  color: #ccc;
+}
+
+.carta__apellido{
+  color: #fff;
+}
+
+.carta__numero{
+  color: #777;
+  font-size: 5rem;
 }
 
 .equipo__carta--img{
-  width: 60%;
+  width: 100%;
+  height: 25rem;
 }
 
 
 /*Tienda*/
-.carousel-item{
-  display: flex;
-  justify-content: space-between;
-
-}
-.card{
-  display: flex;
-  justify-content: center;
-
-}
-
 .cards_tienda{
-  display: flex;
+  display:flex;
   justify-content: space-between;
-  flex-direction: row;
+  margin-right: 15%;
+  margin-left: 15%;
+  margin-bottom: 20%;
 }
 
 .card_tienda{
-  height: 50rem;
-  width: 40rem;
+  width: 25%;
 }
-
-
-
-
-
-
+.fila{
+  display:flex;
+  justify-content: space-between;
+}
+.comprar{
+  background-color: yellow;
+  border-radius: 5rem;
+}
 
 /*Torneo*/
  table {

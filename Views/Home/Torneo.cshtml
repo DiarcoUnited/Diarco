@@ -2,25 +2,29 @@
 <head>
   <title>Tabla de Posiciones</title>
   <style>
+    .table-container {
+      width: 80%;
+      margin: 0 auto;
+    }
     table {
+      border-spacing: 0;
       width: 100%;
-      border-collapse: collapse;
     }
     th, td {
-      border: 1px solid #dddddd;
-      text-align: left;
+      border: 1px solid #999;
       padding: 8px;
-    }
-    th:first-child,
-    td:first-child {
-      /* Ancho para la columna de Posición */
-      width: 20px;
+      text-align: center;
     }
     th {
       background-color: #f2f2f2;
     }
-    .banner {
-      width: 100%;
+    .team-name {
+      display: flex;
+      align-items: center;
+      width: 2%;
+    }
+    .team-name img {
+      margin-right: 10px;
       max-width: 100%;
       height: auto;
     }
@@ -28,34 +32,41 @@
 </head>
 <body>
 
-<div class="container">
-  <h2>Clasificación</h2>
-  <img class="banner" src="~/assets/visitartienda.png" alt="Banner Superior">
-  
+<div class="table-container">
   <table>
     <thead>
       <tr>
-        <th style="width: 20px;">Posición</th>
-        <th>Equipo</th>
-        <th>Datos</th>
+        <th>POS</th>
+        <th>EQUIPO</th>
+        <th>PTS</th>
+        <th>J</th>
+        <th>G</th>
+        <th>E</th>
+        <th>P</th>
+        <th>GF</th>
+        <th>GC</th>
+        <th>GD</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td style="width: 20px;">1</td>
-        <td>Nombre del Equipo 1</td>
-        <td>Datos del Equipo 1</td>
+        <td>1</td>
+        <td class="team-name">
+          <img src="~/assets/escudo.png" alt="Escudo del Equipo A">
+          Equipo A
+        </td>
+        <td>9</td>
+        <td>4</td>
+        <td>3</td>
+        <td>0</td>
+        <td>1</td>
+        <td>8</td>
+        <td>3</td>
+        <td>+5</td>
       </tr>
-      <tr>
-        <td style="width: 20px;">2</td>
-        <td>Nombre del Equipo 2</td>
-        <td>Datos del Equipo 2</td>
-      </tr>
-      <!-- Puedes añadir más filas según sea necesario -->
+      <!-- Agrega más filas con el mismo formato para otros equipos si es necesario -->
     </tbody>
   </table>
-
- <img class="banner" src="~/assets/visitartienda.png" alt="Banner Superior">
 </div>
 
 </body>
