@@ -12,7 +12,7 @@
     
         <header class="header">
             <h1 class="header__titulo" id="titulo__izquierda">DIARCO</h1>
-            <img src="~/assets/escudo.png" class="header__img"/>
+            <a href='@Url.Action("Home")'><img src="~/assets/escudo.png" class="header__img"/></a>
             <h1 class="header__titulo" id="titulo__derecha">UNITED</h1>
         </header>
 
@@ -51,6 +51,8 @@
             @* <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script> *@
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
         <script src="~/js/site.js" asp-append-version="true" type="module"></script>
+        <script src="~/js/Ejecucion.js" asp-append-version="true"></script>
+
         @await RenderSectionAsync("Scripts", required: false)
     </body>
 </html>

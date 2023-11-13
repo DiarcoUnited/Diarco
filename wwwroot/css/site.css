@@ -520,6 +520,9 @@ body{
   margin-right: 10%;
   margin-left: 10%;
 }
+.img_card_tienda{
+  width: auto;
+}
 
 /* Estilos generales */
 .the {
