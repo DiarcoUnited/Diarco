@@ -491,18 +491,20 @@ body{
 
 .carta__tienda {
   border-radius: 3rem;
-  padding: 17rem;
+  width: 30%;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  align-items: center;
   background-color: #47297B;
+  height: 30rem;
+  display:flex;
+  flex-direction:column;
+  align-items: center;  
 }
 
 .cuadrado_tienda {
-  margin-left:5%;
-  margin-top: 5%;
-  margin-right: 5%;
-  margin-bottom: 20%;
-  width: 100%;
+  margin-top:10%;
+  width: 80%;
   height: auto;
   background-color: #ffffff;
   z-index: 10;
@@ -510,8 +512,10 @@ body{
 }
 
 .Precio_tienda {
-
   background-color: #EDC531;
+}
+.img_card_tienda{
+  width: 100%;
 }
 
 .tienda_edit{
@@ -520,10 +524,6 @@ body{
   margin-right: 10%;
   margin-left: 10%;
 }
-.img_card_tienda{
-  width: auto;
-}
-
 /* Estilos generales */
 .the {
   font-family: 'Arial', sans-serif;

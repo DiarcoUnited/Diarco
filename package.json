@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@splidejs/splide": "^4.1.4",
     "@supabase/supabase-js": "^2.38.4"
   }
 }
