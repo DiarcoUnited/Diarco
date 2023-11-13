@@ -1,38 +1,14 @@
-
+<!DOCTYPE html>
+<html lang="es">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tabla de Posiciones</title>
-  <style>
-    .table-container {
-      width: 80%;
-      margin: 0 auto;
-    }
-    table {
-      border-spacing: 0;
-      width: 100%;
-    }
-    th, td {
-      border: 1px solid #999;
-      padding: 8px;
-      text-align: center;
-    }
-    th {
-      background-color: #f2f2f2;
-    }
-    .team-name {
-      display: flex;
-      align-items: center;
-      width: 2%;
-    }
-    .team-name img {
-      margin-right: 10px;
-      max-width: 100%;
-      height: auto;
-    }
-  </style>
 </head>
-<body>
+<body class="the">
 
-<div class="table-container">
+  <h1 class="soygay">Tabla de Posiciones</h1>
+
   <table>
     <thead>
       <tr>
@@ -49,25 +25,56 @@
       </tr>
     </thead>
     <tbody>
+      <!-- Ejemplo de una fila -->
       <tr>
         <td>1</td>
-        <td class="team-name">
-          <img src="~/assets/escudo.png" alt="Escudo del Equipo A">
-          Equipo A
+        <td class="torneo__equipo">
+          <img src="~/assets/escudo.png" alt="" class="escudo">
+         <h3>Equipo 1</h3>
         </td>
-        <td>9</td>
-        <td>4</td>
         <td>3</td>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+        <td>3</td>
+        <td>1</td>
+        <td>2</td>
+      </tr>
+
+      <!-- Puedes agregar más filas según sea necesario -->
+      <tr>
+        <td>2</td>
+        <td class="torneo__equipo">
+          <img src="~/assets/escudo.png" alt="" class="escudo">
+          <h3>Equipo 2</h3>
+        </td>
         <td>0</td>
         <td>1</td>
-        <td>8</td>
-        <td>3</td>
-        <td>+5</td>
+        <td>0</td>
+        <td>0</td>
+        <td>1</td>
+        <td>1</td>
+        <td>2</td>
+        <td>-1</td>
       </tr>
-      <!-- Agrega más filas con el mismo formato para otros equipos si es necesario -->
+      <tr>
+        <td>1</td>
+        <td class="torneo__equipo">
+          <img src="~/assets/escudo.png" alt="" class="escudo">
+         <h3>Equipo 1</h3>
+        </td>
+        <td>3</td>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+        <td>3</td>
+        <td>1</td>
+        <td>2</td>
+      </tr>
     </tbody>
   </table>
-</div>
 
 </body>
 </html>

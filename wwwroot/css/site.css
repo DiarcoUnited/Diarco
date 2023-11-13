@@ -383,13 +383,33 @@ body{
   height: 25rem;
   clip-path: polygon(0 0, 100% 90%, 100% 100%, 0 100%);
   /* polygon(0 0, 100% 0, 100% 60%, 0 100%) */
+  transform: translateZ(0);
 }
+
 
 .equipo__alineacion--izquierda{
   width: 100%;
   background-color: var(--oscuro);
   height: 25rem;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 10%);
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 10%);
+  /*  */
+  transform: translateZ(0);
+}
+
+.equipo__alineacion--derecha-2{
+  width: 100%;
+  background-color: var(--oscuro);
+  height: 25rem;
+  clip-path: polygon(0 100%, 100% 00%, 100% 100%, 0 100%);
+  /* polygon(0 0, 100% 0, 100% 60%, 0 100%) */
+}
+
+
+.equipo__alineacion--izquierda-2{
+  width: 100%;
+  background-color: var(--oscuro);
+  height: 25rem;
+  clip-path: polygon(0 0, 100% 0, 100% 10%, 0% 90%);
   /*  */
 }
 
@@ -404,7 +424,7 @@ body{
 .equipo__carta{
   border: 1px solid var(--amarillo-oscuro);
   background-color: var(--oscuro);
-  width: 16%;
+  width: 14%;
   text-align: center;
   padding: 3rem;
   padding-bottom: 1.5rem;
@@ -413,6 +433,15 @@ body{
   z-index: 10;
 }
 
+.equipo__carta--1{
+  left: 20%;
+}
+
+.equipo__carta--3{
+  right: 20%;
+}
+
+
 .carta__cuerpo{
   display: flex;
   justify-content: space-between;
@@ -420,14 +449,20 @@ body{
 }
 
 .carta__nombres{
+  margin-top: 1rem;
   text-align: start;
+  
 }
 .carta__nombre{
   color: #ccc;
+  font-size: 2rem;
+  line-height: .8;
 }
 
 .carta__apellido{
   color: #fff;
+    font-size: 2rem;
+    
 }
 
 .carta__numero{
@@ -442,41 +477,93 @@ body{
 
 
 /*Tienda*/
-.cards_tienda{
-  display:flex;
-  justify-content: space-between;
-  margin-right: 15%;
-  margin-left: 15%;
+.card-container-general{
+  display: flex;
+  flex-direction: column;
+}
+.carta-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  justify-content: space-around;
+  margin: 5%;
+}
+
+.carta__tienda {
+  border-radius: 3rem;
+  padding: 17rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #47297B;
+}
+
+.cuadrado_tienda {
+  margin-left:5%;
+  margin-top: 5%;
+  margin-right: 5%;
   margin-bottom: 20%;
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  z-index: 10;
+  position: relative;
 }
 
-.card_tienda{
-  width: 25%;
-}
-.fila{
-  display:flex;
-  justify-content: space-between;
-}
-.comprar{
-  background-color: yellow;
-  border-radius: 5rem;
+.Precio_tienda {
+
+  background-color: #EDC531;
 }
 
-/*Torneo*/
- table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    th, td {
-      border: 1px solid #dddddd;
-      text-align: left;
-      padding: 8px;
-    }
-    th {
-      background-color: #f2f2f2;
-    }
-    .banner {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-    }
+.tienda_edit{
+  width: 80%;
+  height: 15rem;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+/* Estilos generales */
+.the {
+  font-family: 'Arial', sans-serif;
+  margin: 20px;
+}
+.the h1{
+  margin-left: 20%;
+}
+
+table {
+  width: 85%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+th .escudo,
+td .escudo {
+  width: 50px;
+  height: auto;
+  text-align: left;
+}
+.torneo__equipo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.torneo__equipo h3{
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.torneo__equipo img{
+  margin-right: 10%;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: center;
+}
+
