@@ -1,16 +1,12 @@
 ﻿import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
 const supabase = createClient('https://thgcusmwbavdcuyotqxc.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRoZ2N1c213YmF2ZGN1eW90cXhjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTg2NjYzOTAsImV4cCI6MjAxNDI0MjM5MH0.Ekd9wURADgAVccw6uyqwwH7cdySXLjxFvBlbWwmupwM')
 
-// import Splide from '@splidejs/splide';
 
-// var splide = new Splide( '.splide', {
-//   type   : 'loop',
-//   perPage: 4,
-//   perMove: 1,
+// document.addEventListener( 'DOMContentLoaded', function() {
+//   console.log("hola");
+//   var splide = new Splide( '.splide' );
+//   splide.mount();
 // } );
-
-// splide.mount();
-
 
 
 async function Listar(tabla){
@@ -22,18 +18,7 @@ async function Listar(tabla){
 }
 
 
-const formInsertar = document.getElementById("form-insertar");
-async function InsertarJugador(){
-  const nombre = document.getElementById("nombreJugador").value;
-  const apellido = document.getElementById("apellidoJugador").value;
-  const numero = document.getElementById("numeroJugador").value;
-  const posicion = document.getElementById("posicionJugador").value;
-  const link_foto = document.getElementById("foto_Jugador").value;
 
-const { error } = await supabase
-.from('Jugador')
-.insert({Nombre: nombre,Numero:numero, Posicion:posicion,Foto:link_foto,Apellido:apellido})
-}
 async function equipo(){
 const Jugadores=await Listar("Jugador");
 const Delanteros=[];
@@ -57,12 +42,43 @@ Jugadores.forEach(jugador => {
       Delanteros.push(jugador);
       break;
   }
-  console.log(jugador.Posicion, "AAAAAAAAA");
 });
-const carta_arquero=document.getElementById("Arquero");
-carta_arquero.innerHTML=`<div class="equipo__carta equipo__carta--2"><img src=${Arquero.Foto} class="equipo__carta--img"><div class="carta__cuerpo"><div class="carta__nombres"><h5 class="carta__nombre">${Arquero.Nombre}</h5><h4 class="carta__apellido">${Arquero.Apellido}</h4></div><h3 class="carta__numero">${Arquero.Numero}</h3></div></div>`;
-const nombre_defensa_1=document.getElementById("nombre_defensa_1");
-nombre_defensa_1.innerText=Defensores[0].Nombre;
+const nombre=document.getElementById("nombre_arquero");
+const apellido=document.getElementById("apellido_arquero");
+const Numero=document.getElementById("numero_arquero");
+const imagen=document.getElementById("imagen_arquero");
+nombre.innerText=Arquero.Nombre;
+apellido.innerText=Arquero.Apellido;
+Numero.innerText=Arquero.Numero;
+imagen.setAttribute("src",Arquero.Foto);
+
+let i=0;
+while(i<Defensores.length){
+console.log(Defensores[i].Nombre);
+const nombre_defensa=document.getElementById("nombre_defensa_"+(i+1));
+const apellido_defensa=document.getElementById("apellido_defensa_"+(i+1));
+const Numero_defensa=document.getElementById("numero_defensa_"+(i+1));
+const imagen_defensa=document.getElementById("imagen_defensa_"+(i+1));
+nombre_defensa.innerText= Defensores[i].Nombre;
+apellido_defensa.innerText=Defensores[i].Apellido;
+Numero_defensa.innerText=Defensores[i].Numero;
+imagen_defensa.setAttribute("src",Defensores[i].Foto);
+i++;
+}
+
+i=0;
+while(i<Mediocampistas.length){
+console.log("a");
+const nombre_medio=document.getElementById("nombre_medio_"+(i+1));
+const apellido_medio=document.getElementById("apellido_medio_"+(i+1));
+const Numero_medio=document.getElementById("numero_medio_"+(i+1));
+const imagen_medio=document.getElementById("imagen_medio_"+(i+1));
+nombre_medio.innerText=Mediocampistas[i].Nombre;
+apellido_medio.innerText=Mediocampistas[i].Apellido;
+Numero_medio.innerText=Mediocampistas[i].Numero;
+imagen_medio.setAttribute("src",Mediocampistas[i].Foto);
+i++;
+}
 }
 
 window.addEventListener('load', equipo());

@@ -524,6 +524,22 @@ body{
   margin-right: 10%;
   margin-left: 10%;
 }
+
+.splide__carta{
+  border-radius: 10px;
+  width: 60%;
+  text-align: center;
+}
+
+.splide__img--wrapper{
+  background-color: #aaa;
+
+}
+
+.splide__img--wrapper img{
+  width: 70%;
+}
+
 /* Estilos generales */
 .the {
   font-family: 'Arial', sans-serif;
