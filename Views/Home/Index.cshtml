@@ -2,6 +2,8 @@
     ViewData["Title"] = "DIARCO UNITED";
 }
 
+<div class="index__body" id="index-body">
+
 <img src="~/assets/editriber.jpg" class="home__edit"/>
 
 <section class="home__partido">
@@ -102,7 +104,9 @@
         </div>
 </section>
 
-<div class="index__popup">
+<div class="index__popup invisible" id="homePopup">
+        <button><i class="fa-solid fa-xmark" id="popup-x"></i></button>
+
     <h2 class="popup__titulo">Proximo Partido</h2>
     <div class="popup__contador">
 
@@ -129,9 +133,10 @@
             <p class="popup__parrafo">Sabado 03 de Agosto 17:30</p>
             <p class="popup__parrafo">Sede GRUN</p>
         </div>
-
         <img src="~/assets/escudo.png" class="popup__img" alt="equipo rival">
     </div>
 
     <button class="popup__boton">CONVOCADOS</button>
 </div>
+</div>
+<script src="~/js/popup.js"></script>

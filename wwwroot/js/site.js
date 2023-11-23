@@ -20,12 +20,12 @@ async function Listar(tabla){
 
 
 async function equipo(){
+ 
 const Jugadores=await Listar("Jugador");
 const Delanteros=[];
 const Defensores=[];
 let Arquero=null;
 const Mediocampistas=[];
-console.log(Jugadores);
 
 Jugadores.forEach(jugador => {
   switch(jugador.Posicion){
@@ -54,7 +54,6 @@ imagen.setAttribute("src",Arquero.Foto);
 
 let i=0;
 while(i<Defensores.length){
-console.log(Defensores[i].Nombre);
 const nombre_defensa=document.getElementById("nombre_defensa_"+(i+1));
 const apellido_defensa=document.getElementById("apellido_defensa_"+(i+1));
 const Numero_defensa=document.getElementById("numero_defensa_"+(i+1));
@@ -67,18 +66,51 @@ i++;
 }
 
 i=0;
+
 while(i<Mediocampistas.length){
-console.log("a");
-const nombre_medio=document.getElementById("nombre_medio_"+(i+1));
-const apellido_medio=document.getElementById("apellido_medio_"+(i+1));
-const Numero_medio=document.getElementById("numero_medio_"+(i+1));
-const imagen_medio=document.getElementById("imagen_medio_"+(i+1));
-nombre_medio.innerText=Mediocampistas[i].Nombre;
-apellido_medio.innerText=Mediocampistas[i].Apellido;
-Numero_medio.innerText=Mediocampistas[i].Numero;
-imagen_medio.setAttribute("src",Mediocampistas[i].Foto);
-i++;
+  const nombre_medio=document.getElementById("nombre_medio_"+(i+1));
+  const apellido_medio=document.getElementById("apellido_medio_"+(i+1));
+  const Numero_medio=document.getElementById("numero_medio_"+(i+1));
+  const imagen_medio=document.getElementById("imagen_medio_"+(i+1));
+  nombre_medio.innerText=Mediocampistas[i].Nombre;
+  apellido_medio.innerText=Mediocampistas[i].Apellido;
+  Numero_medio.innerText=Mediocampistas[i].Numero;
+  imagen_medio.setAttribute("src",Mediocampistas[i].Foto);
+  i++;
+  }
+
+  i=0;
+  while(i<Delanteros.length){
+  const nombre_delan=document.getElementById("nombre_delan_"+(i+1));
+  const apellido_delan=document.getElementById("apellido_delan_"+(i+1));
+  const Numero_delan=document.getElementById("numero_delan_"+(i+1));
+  const imagen_delan=document.getElementById("imagen_delan_"+(i+1));
+  nombre_delan.innerText=Delanteros[i].Nombre;
+  apellido_delan.innerText=Delanteros[i].Apellido;
+  Numero_delan.innerText=Delanteros[i].Numero;
+  imagen_delan.setAttribute("src",Delanteros[i].Foto);
+  i++;
+}}
+
+
+if(window.location.pathname=="/Home/Equipo"){
+window.addEventListener('load', equipo());
 }
+window.addEventListener('load', Tienda());
+
+async function Tienda(){
+  const Productos=await Listar("Producto");
+  console.log(Productos);
+  let i=0;
+  while(i<Productos.length){
+    const nombre_producto=document.getElementById("nombre_producto_"+(i+1));
+    const foto_producto=document.getElementById("foto_producto_"+(i+1));
+    const precio_producto=document.getElementById("precio_producto_"+(i+1));
+    nombre_producto.innerText=Productos[i].nombre;
+    foto_producto.setAttribute("src",Productos[i].foto);
+    precio_producto.innerText="$ "+Productos[i].precio;
+    i++;
+  }
+
 }
 
-window.addEventListener('load', equipo());
