@@ -23,7 +23,14 @@ async function ListarRivalesTorneo(tabla,idTorneo){
   .select()
   .eq('id_torneo', idTorneo)
   .order('puntos',{ascending:false})
-  //se guardan en data
+  return data;
+}
+
+async function ListarRivales(tabla){
+  const { data, error } = await supabase
+  .from(tabla)
+  .select()
+  .order('puntos', { referenceTable: 'RivalXTorneo', ascending: false })
   return data;
 }
 
@@ -111,7 +118,7 @@ window.addEventListener('load', Tienda());
 }
 
 if(window.location.pathname=="/Home/Torneo"){
-  window.addEventListener('load', Torneo());
+  Torneo();
 }
 
 async function Tienda(){
@@ -132,27 +139,50 @@ async function Tienda(){
 async function Torneo(){
   const Rivales=await Listar("Rival");
   const RivalXTorneo=await ListarRivalesTorneo('RivalXTorneo',1);
-  console.log(RivalXTorneo);
-  let i=1;
+  let i=0;
   const tabla=document.getElementById("TablaTorneo");
-  while(i<=RivalXTorneo.length){
-    tabla.appendChild(
-      <tr>
-        <td>{i}</td>
+  let contenidotabla = [];
+  while(i<RivalXTorneo.length){
+    console.log(Rivales[i].foto);
+    if(Rivales[i].nombre!='Diarco'){
+    contenidotabla.push(
+      `<tr>
+        <td>${i+1}</td>
         <td class="torneo__equipo">
-          <img src="`${}`" alt="" class="escudo"></img>
-         <h3>Equipo 1</h3>
+          <img src="${Rivales[RivalXTorneo[i].id_rival-1].foto}" class="escudo"></img>
+         <h3>${Rivales[RivalXTorneo[i].id_rival-1].nombre}</h3>
         </td>
-        <td>3</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>0</td>
-        <td>3</td>
-        <td>1</td>
-        <td>2</td>
-      </tr>
+        <td>${RivalXTorneo[i].puntos}</td>
+        <td>${(RivalXTorneo[i].ganados + RivalXTorneo[i].perdidos + RivalXTorneo[i].empatados)}</td>
+        <td>${RivalXTorneo[i].ganados}</td>
+        <td>${RivalXTorneo[i].empatados}</td>
+        <td>${RivalXTorneo[i].perdidos}</td>
+        <td>${RivalXTorneo[i].golesFavor}</td>
+        <td>${RivalXTorneo[i].golesContra}</td>
+        <td>${(RivalXTorneo[i].golesFavor - RivalXTorneo[i].golesContra)}</td>
+      </tr>`
     )
-
+    }else{
+      contenidotabla.push(
+        `<tr class="amarillo">
+          <td>${i+1}</td>
+          <td class="torneo__equipo">
+            <img src="${Rivales[RivalXTorneo[i].id_rival-1].foto}" class="escudo"></img>
+           <h3>${Rivales[RivalXTorneo[i].id_rival-1].nombre}</h3>
+          </td>
+          <td>${RivalXTorneo[i].puntos}</td>
+          <td>${(RivalXTorneo[i].ganados + RivalXTorneo[i].perdidos + RivalXTorneo[i].empatados)}</td>
+          <td>${RivalXTorneo[i].ganados}</td>
+          <td>0</td>
+          <td>0</td>
+          <td>3</td>
+          <td>1</td>
+          <td>2</td>
+        </tr>`
+      )
+    }
+    i++;
   }
+  tabla.innerHTML=contenidotabla;
+
 }
