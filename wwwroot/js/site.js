@@ -17,6 +17,15 @@ async function Listar(tabla){
   return data;
 }
 
+async function ListarRivalesTorneo(tabla,idTorneo){
+  const { data, error } = await supabase
+  .from(tabla)
+  .select()
+  .eq('id_torneo', idTorneo)
+  .order('puntos',{ascending:false})
+  //se guardan en data
+  return data;
+}
 
 
 async function equipo(){
@@ -96,7 +105,14 @@ while(i<Mediocampistas.length){
 if(window.location.pathname=="/Home/Equipo"){
 window.addEventListener('load', equipo());
 }
+
+if(window.location.pathname=="/Home/Tienda"){
 window.addEventListener('load', Tienda());
+}
+
+if(window.location.pathname=="/Home/Torneo"){
+  window.addEventListener('load', Torneo());
+}
 
 async function Tienda(){
   const Productos=await Listar("Producto");
@@ -111,6 +127,32 @@ async function Tienda(){
     precio_producto.innerText="$ "+Productos[i].precio;
     i++;
   }
-
 }
 
+async function Torneo(){
+  const Rivales=await Listar("Rival");
+  const RivalXTorneo=await ListarRivalesTorneo('RivalXTorneo',1);
+  console.log(RivalXTorneo);
+  let i=1;
+  const tabla=document.getElementById("TablaTorneo");
+  while(i<=RivalXTorneo.length){
+    tabla.appendChild(
+      <tr>
+        <td>{i}</td>
+        <td class="torneo__equipo">
+          <img src="`${}`" alt="" class="escudo"></img>
+         <h3>Equipo 1</h3>
+        </td>
+        <td>3</td>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+        <td>3</td>
+        <td>1</td>
+        <td>2</td>
+      </tr>
+    )
+
+  }
+}

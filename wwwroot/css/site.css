@@ -541,6 +541,18 @@ body{
 
 
 /*Tienda*/
+
+.tienda{
+  position: relative;
+}
+
+.home__edit__tienda{
+  width: 90%;
+  height: 45rem;
+  margin: auto;
+  margin-top: 1.5%;
+  display: block;
+}
 .card-container-general{
   display: flex;
   flex-direction: column;
@@ -554,7 +566,6 @@ body{
 }
 
 .carta__tienda {
-  position: relative;
   border-radius: 1.5rem;
   width: 26%;
   text-align: center;
@@ -594,8 +605,8 @@ body{
   background-color: #EDC531;
   font-size: 2.3rem;
   position: absolute;
-  bottom: 5.3rem;
-  left: 1.2rem;
+  bottom: 4.8rem;
+  left: 1.4rem;
   color: #fff;
 }
 .img_card_tienda{
@@ -609,19 +620,51 @@ body{
   margin-left: 10%;
 }
 
+.splide{
+  width: 90%;
+  margin: auto; 
+}
+
+.splide__track{
+  margin: 0 5rem;
+  overflow: visible;
+}
+
 .splide__carta{
   border-radius: 10px;
-  width: 60%;
+  width: 80%;
   text-align: center;
+  position: relative;
+  overflow: visible;
+
 }
 
 .splide__img--wrapper{
-  background-color: #aaa;
-
+  background-color: #d9d9d9;
+  width: 100%;
+  height: 30rem;
+  position: relative;
+  border-radius: 20px;
 }
 
-.splide__img--wrapper img{
-  width: 70%;
+.splide__img{
+  width: 40rem;
+  position: absolute;
+  left: -20%;
+  top: -20%;
+  z-index: 10;
+}
+.boton__tienda{
+  margin: 1%;
+  margin-top: 2%;
+  background-color: var(--amarillo-oscuro);
+  width: 7%;
+  height: 5rem;
+  border-radius: .7rem;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+
 }
 
 /* Estilos generales */
