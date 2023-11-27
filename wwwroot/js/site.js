@@ -17,6 +17,14 @@ async function Listar(tabla){
   return data;
 }
 
+async function ListarPartidos(){
+  const { data, error } = await supabase
+  .from('Partido')
+  .select()
+  .order('Fecha',{ascending:false})
+  return data;
+}
+
 async function ListarRivalesTorneo(tabla,idTorneo){
   const { data, error } = await supabase
   .from(tabla)
@@ -26,17 +34,9 @@ async function ListarRivalesTorneo(tabla,idTorneo){
   return data;
 }
 
-async function ListarRivales(tabla){
-  const { data, error } = await supabase
-  .from(tabla)
-  .select()
-  .order('puntos', { referenceTable: 'RivalXTorneo', ascending: false })
-  return data;
-}
 
 
 async function equipo(){
- 
 const Jugadores=await Listar("Jugador");
 const Delanteros=[];
 const Defensores=[];
@@ -110,15 +110,18 @@ while(i<Mediocampistas.length){
 
 
 if(window.location.pathname=="/Home/Equipo"){
-window.addEventListener('load', equipo());
+equipo();
 }
 
 if(window.location.pathname=="/Home/Tienda"){
-window.addEventListener('load', Tienda());
+Tienda();
 }
 
 if(window.location.pathname=="/Home/Torneo"){
   Torneo();
+}
+if(window.location.pathname=="/Home/Historial"){
+  Historial();
 }
 
 async function Tienda(){
@@ -148,10 +151,8 @@ async function Torneo(){
     contenidotabla.push(
       `<tr>
         <td>${i+1}</td>
-        <td class="torneo__equipo">
-          <img src="${Rivales[RivalXTorneo[i].id_rival-1].foto}" class="escudo"></img>
-         <h3>${Rivales[RivalXTorneo[i].id_rival-1].nombre}</h3>
-        </td>
+        <td><img src="${Rivales[RivalXTorneo[i].id_rival-1].foto}" class="escudo"></img></td>
+        <td class="torneo__equipo"><h3>${Rivales[RivalXTorneo[i].id_rival-1].nombre}</h3></td>
         <td>${RivalXTorneo[i].puntos}</td>
         <td>${(RivalXTorneo[i].ganados + RivalXTorneo[i].perdidos + RivalXTorneo[i].empatados)}</td>
         <td>${RivalXTorneo[i].ganados}</td>
@@ -166,10 +167,8 @@ async function Torneo(){
       contenidotabla.push(
         `<tr class="amarillo">
           <td>${i+1}</td>
-          <td class="torneo__equipo">
-            <img src="${Rivales[RivalXTorneo[i].id_rival-1].foto}" class="escudo"></img>
-           <h3>${Rivales[RivalXTorneo[i].id_rival-1].nombre}</h3>
-          </td>
+          <td><img src="${Rivales[RivalXTorneo[i].id_rival-1].foto}" class="escudo"></img></td>
+          <td class="torneo__equipo"><h3>${Rivales[RivalXTorneo[i].id_rival-1].nombre}</h3></td>
           <td>${RivalXTorneo[i].puntos}</td>
           <td>${(RivalXTorneo[i].ganados + RivalXTorneo[i].perdidos + RivalXTorneo[i].empatados)}</td>
           <td>${RivalXTorneo[i].ganados}</td>
@@ -184,5 +183,47 @@ async function Torneo(){
     i++;
   }
   tabla.innerHTML=contenidotabla;
+}
 
+async function Historial(){
+  const Partidos=await ListarPartidos();
+  const Torneos=await Listar('Torneo');
+  const Rivales=await Listar('Rival');
+  let i=0;
+  const tabla=document.getElementById("tabla_historial");
+  let contenidoHistorial=[];
+  while(i<Partidos.length){
+    contenidoHistorial.push(
+    `<article class="historial__partido">
+    <h3 class="partidoH__titulo">${Torneos[(Partidos[i].torneo_id-1)].Nombre}</h3>
+
+    <div class="partidoH__info">
+        <div class="partidoH__equipos">
+            <div class="partidoH__equipo">
+                <div class="partidoH__equipo--wrapper">
+                    <img class="partidoH__logo" src="${Rivales[8].foto}"/>
+                    <h6 class="partidoH__nombre">Diarco United</h6>
+                </div>
+                <h6 class="partidoH__resultado">${Partidos[i].GolesFavor}</h6>
+            </div>
+                 <div class="partidoH__equipo">
+                    <div class="partidoH__equipo--wrapper">
+                        <img class="partidoH__logo" src="${Rivales[Partidos[i].rival_id-1].foto}"/>
+                        <h6 class="partidoH__nombre">${Rivales[Partidos[i].rival_id-1].nombre}</h6>
+                    </div>
+                    <h6 class="partidoH__resultado">${Partidos[i].GolesContra}</h6>
+            </div>
+        </div>
+        <div class="partidoH__derecha">
+            <div class="partidoH__hora">
+                <h5 class="partidoH__fin">Fin</h5>
+                <h4 class="partidoH__fecha">${Partidos[i].Fecha}</h4>
+            </div>
+        </div></div></article>`)
+        console.log(i);
+
+    i++;
+  }
+
+  tabla.innerHTML=contenidoHistorial;
 }

@@ -785,7 +785,7 @@ td {
 
 .historial__partido{
   padding: 2rem;
-  width: 50%;
+  width: 49.5%;
 }
 
 .partidoH__info{
@@ -823,4 +823,9 @@ td {
 .partidoH__resultado{
   font-size: 1.8rem;
   font-family: 600;
+}
+
+.amarillo{
+  background-color: rgb(241, 241, 135);
+  border-color: black;
 }
