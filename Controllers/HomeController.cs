@@ -27,6 +27,15 @@ public class HomeController : Controller
     {
         return View();
     }
+    public IActionResult Admin()
+    {
+        return View();
+    }
+    public IActionResult Estadisticas()
+    {
+        return View();
+    }
+
 
 
 }
