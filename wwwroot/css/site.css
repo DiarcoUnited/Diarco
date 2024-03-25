@@ -5,7 +5,7 @@ html {
 }
 
 
-:root{
+:root {
   --oscuro: #1B003A;
   --principal: #47297B;
   --claro: #6F2DBD;
@@ -13,18 +13,19 @@ html {
   --amarillo-oscuro: #F5BD1F;
 }
 
-a{
+a {
   color: inherit;
   text-decoration: none;
 }
 
-*, ul{
+*,
+ul {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   font-family: 'Maven Pro', sans-serif;
   background-color: #f7f7f7;
   position: relative;
@@ -32,36 +33,38 @@ body{
 
 
 
-.header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1.5rem;
-    user-select: none;
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  user-select: none;
 }
 
-#titulo__izquierda{
+#titulo__izquierda {
   margin-right: 10px;
 }
 
-#titulo__derecha{
+#titulo__derecha {
   margin-left: 10px;
 }
 
-.header__titulo{
+.header__titulo {
   font-size: 3rem;
   font-family: 'Montserrat', sans-serif;
   text-shadow: 5px 5px 5px #0004;
 }
 
-.header__img{
+.header__img {
   width: 5rem;
 }
 
 .nav {
   display: flex;
-  justify-content: space-between; /* Distribuye los elementos a lo largo del eje principal (horizontal) */
-  align-items: center; /* Centra los elementos verticalmente */
+  justify-content: space-between;
+  /* Distribuye los elementos a lo largo del eje principal (horizontal) */
+  align-items: center;
+  /* Centra los elementos verticalmente */
   background-color: var(--principal);
 }
 
@@ -72,10 +75,10 @@ body{
   align-items: center;
   margin-left: 32rem;
   min-width: 30%;
-  
+
 }
 
-.menu__item{
+.menu__item {
   display: inline-block;
   padding: 2rem 1.5rem;
   font-size: 2rem;
@@ -88,7 +91,7 @@ body{
   margin-right: 14rem;
 }
 
-.menu__boton{
+.menu__boton {
   padding: 1rem;
   font-family: 'Maven Pro', sans-serif;
   font-weight: 500;
@@ -98,120 +101,120 @@ body{
 
 }
 
-.fa-id-card{
+.fa-id-card {
   margin-right: 8px;
 }
 
-.fa-cart-shopping{
+.fa-cart-shopping {
   margin-right: 8px;
 }
 
-#miDiarco{
+#miDiarco {
   background-color: transparent;
   border: var(--amarillo) 1px solid;
   color: var(--amarillo);
   margin-right: 2rem;
 }
 
-#tienda{
+#tienda {
   background-color: var(--amarillo);
   color: var(--principal);
   border: none;
 }
 
-.footer{
+.footer {
   margin-top: 40rem;
   background-color: #000;
   position: relative;
   color: #fbfbfb;
 }
 
-.footer__img{
+.footer__img {
   width: 10%;
   position: absolute;
   top: -25%;
   right: 45%;
 }
 
-.footer__frases{
+.footer__frases {
   display: flex;
   justify-content: space-around;
   padding: 13rem 0 8rem 0;
 }
 
-.footer__titulo{
+.footer__titulo {
   font-size: 3.5rem;
   font-weight: 400;
   transition: all .3s;
   user-select: none;
 }
 
-.footer__iconos{
+.footer__iconos {
   display: flex;
   justify-content: center;
   font-size: 4rem;
   padding: 5rem;
 }
 
-.footer__icono{
+.footer__icono {
   margin-right: 2rem;
   transition: all .3s;
 }
 
-.footer__icono:hover{
+.footer__icono:hover {
   color: var(--amarillo);
 }
 
-.fa-envelope{
+.fa-envelope {
   margin-right: 0;
 }
 
 /* INDEX */
 
-.home__edit{
+.home__edit {
   width: 100%;
   height: 45rem;
   margin: auto;
   display: block;
 }
 
-.home__partido{
+.home__partido {
   display: flex;
   padding: 10rem 0;
 }
 
-.proximo{
+.proximo {
   text-align: center;
 }
 
-.proximo__titulo{
+.proximo__titulo {
   font-size: 2.8rem;
   margin-bottom: 3rem;
   color: var(--oscuro);
 }
 
-.proximo__img{
+.proximo__img {
   width: 15%;
 }
 
-.proximo-datos{
+.proximo-datos {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
 }
 
-.proximo-datos__titulos{
+.proximo-datos__titulos {
   text-align: center;
   font-size: 5rem;
   color: var(--principal);
 }
 
-.proximo-datos__titulo{
+.proximo-datos__titulo {
   font-weight: 500;
 }
 
-.proximo-datos__boton{
+.proximo-datos__boton {
   text-transform: uppercase;
   font-family: 'Maven Pro', sans-serif;
   background-color: var(--principal);
@@ -226,32 +229,32 @@ body{
   cursor: pointer;
 }
 
-.home__carrusel{
+.home__carrusel {
   margin: 5rem;
 }
 
-.carousel-inner{
+.carousel-inner {
   width: 100%;
   height: 100%;
 }
 
-.carousel{
+.carousel {
   height: 60rem;
 }
 
-.carousel__jugador{
+.carousel__jugador {
   background-color: var(--oscuro);
   height: 60rem;
 }
 
 
-.home__ultimos{
+.home__ultimos {
   width: 60%;
   margin: auto;
   margin-bottom: 30rem;
 }
 
-.ultimos__titulo{
+.ultimos__titulo {
   font-size: 2.8rem;
   background-color: var(--oscuro);
   color: #f7f7f7;
@@ -261,12 +264,12 @@ body{
   text-align: center;
 }
 
-.ultimos__fecha{
+.ultimos__fecha {
   text-align: center;
   font-size: 1.2rem;
 }
 
-.ultimos__partido{
+.ultimos__partido {
   display: flex;
   justify-content: space-between;
   background-color: var(--oscuro);
@@ -275,12 +278,12 @@ body{
   margin-bottom: 3rem;
 }
 
-.partido__tifa{
+.partido__tifa {
   width: 7rem;
   border-right: 2px solid #f7f7f7;
 }
 
-.partido__equipos{
+.partido__equipos {
   display: flex;
   width: 100%;
   color: #fbfbfb;
@@ -288,15 +291,16 @@ body{
   align-items: center;
 }
 
-.partido__equipo, .partido__resultado{
+.partido__equipo,
+.partido__resultado {
   font-size: 1.8rem;
 }
 
-.partido__img{
+.partido__img {
   width: 6rem;
 }
 
-.hidden{
+.hidden {
   opacity: 0;
   visibility: hidden;
   display: none;
@@ -304,11 +308,11 @@ body{
 
 /* POPUP */
 
-.index__body{
+.index__body {
   position: relative;
 }
 
-.fa-xmark{
+.fa-xmark {
   color: #fff;
   font-size: 3rem;
   position: absolute;
@@ -319,14 +323,17 @@ body{
 .negro::before {
   content: "";
   background-color: #0008;
-  z-index: 2; /* Establece un índice de apilamiento inferior al de otros elementos */
-  position: absolute; /* Asegura que el fondo se extienda a lo largo de toda la página */
+  z-index: 2;
+  /* Establece un índice de apilamiento inferior al de otros elementos */
+  position: absolute;
+  /* Asegura que el fondo se extienda a lo largo de toda la página */
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
 }
-.index__popup{
+
+.index__popup {
   padding: 2rem;
   position: absolute;
   top: 5%;
@@ -342,26 +349,26 @@ body{
   border-radius: 20px;
 }
 
-.popup__titulo{
+.popup__titulo {
   color: #fbfbfb;
   font-size: 4rem;
   font-weight: 700;
   margin: 3rem;
 }
 
-.popup__contador{
+.popup__contador {
   display: flex;
 
 }
 
-.contador__cuadrado{
+.contador__cuadrado {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-right: 2rem;
 }
 
-.contador__hora{
+.contador__hora {
   background-color: var(--claro);
   width: 10rem;
   height: 10rem;
@@ -375,14 +382,14 @@ body{
 }
 
 
-.contador__titulo{
+.contador__titulo {
   color: #fbfbfb;
   font-size: 1.7rem;
   font-weight: 500;
 
 }
 
-.popup__partido{
+.popup__partido {
   margin: 5rem 0;
   display: flex;
   color: #fff;
@@ -390,13 +397,13 @@ body{
   align-items: center;
 }
 
-.popup__parrafos{
+.popup__parrafos {
   font-size: 2rem;
   font-weight: 600;
   text-align: center;
 }
 
-.popup__boton{
+.popup__boton {
   text-transform: uppercase;
   font-family: 'Maven Pro', sans-serif;
   background-color: var(--principal);
@@ -406,30 +413,29 @@ body{
   padding: 1rem 6rem;
   border-radius: 12px;
   cursor: pointer;
-  border:1px solid var(--amarillo-oscuro);
+  border: 1px solid var(--amarillo-oscuro);
 }
 
-.popup__img{
+.popup__img {
   margin-right: 3rem;
   width: 15%;
 }
 
-.invisible{
+.invisible {
   display: none;
   opacity: 0;
 }
 
-.visible{
+.visible {
   display: flex;
   opacity: 1;
 }
 
 /* EQUIPO */
 
-.equipo{
-}
+.equipo {}
 
-.equipo__titulo{
+.equipo__titulo {
   z-index: 10;
   color: #000;
   text-align: center !important;
@@ -437,12 +443,12 @@ body{
   font-size: 3rem;
 }
 
-.equipo__edit{
+.equipo__edit {
   width: 100%;
   height: 20rem;
 }
 
-.equipo__alineacion--derecha{
+.equipo__alineacion--derecha {
   width: 100%;
   background-color: var(--oscuro);
   height: 25rem;
@@ -452,7 +458,7 @@ body{
 }
 
 
-.equipo__alineacion--izquierda{
+.equipo__alineacion--izquierda {
   width: 100%;
   background-color: var(--oscuro);
   height: 25rem;
@@ -461,7 +467,7 @@ body{
   transform: translateZ(0);
 }
 
-.equipo__alineacion--derecha-2{
+.equipo__alineacion--derecha-2 {
   width: 100%;
   background-color: var(--oscuro);
   height: 25rem;
@@ -470,7 +476,7 @@ body{
 }
 
 
-.equipo__alineacion--izquierda-2{
+.equipo__alineacion--izquierda-2 {
   width: 100%;
   background-color: var(--oscuro);
   height: 25rem;
@@ -478,7 +484,7 @@ body{
   /*  */
 }
 
-.equipo__carta--fondo{
+.equipo__carta--fondo {
   background-color: var(--oscuro);
   display: flex;
   justify-content: center;
@@ -486,7 +492,7 @@ body{
   position: relative;
 }
 
-.equipo__carta{
+.equipo__carta {
   border: 1px solid var(--amarillo-oscuro);
   background-color: var(--oscuro);
   width: 14%;
@@ -498,44 +504,45 @@ body{
   z-index: 10;
 }
 
-.equipo__carta--1{
+.equipo__carta--1 {
   left: 20%;
 }
 
-.equipo__carta--3{
+.equipo__carta--3 {
   right: 20%;
 }
 
 
-.carta__cuerpo{
+.carta__cuerpo {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.carta__nombres{
+.carta__nombres {
   margin-top: 1rem;
   text-align: start;
-  
+
 }
-.carta__nombre{
+
+.carta__nombre {
   color: #ccc;
   font-size: 2rem;
   line-height: .8;
 }
 
-.carta__apellido{
+.carta__apellido {
   color: #fff;
-    font-size: 2rem;
-    
+  font-size: 2rem;
+
 }
 
-.carta__numero{
+.carta__numero {
   color: #777;
   font-size: 5rem;
 }
 
-.equipo__carta--img{
+.equipo__carta--img {
   width: 100%;
   height: 25rem;
 }
@@ -543,21 +550,23 @@ body{
 
 /*Tienda*/
 
-.tienda{
+.tienda {
   position: relative;
 }
 
-.home__edit__tienda{
+.home__edit__tienda {
   width: 90%;
   height: 45rem;
   margin: auto;
   margin-top: 1.5%;
   display: block;
 }
-.card-container-general{
+
+.card-container-general {
   display: flex;
   flex-direction: column;
 }
+
 .carta-container {
   display: flex;
   flex-wrap: wrap;
@@ -574,26 +583,29 @@ body{
   align-items: center;
   background-color: #47297B;
   height: 40rem;
-  display:flex;
-  flex-direction:column;
-  align-items: center;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-evenly;
   position: relative;
 }
-.Imagen__Producto{
+
+.Imagen__Producto {
   width: 95%;
   margin-top: 2.5%;
   height: 33rem;
   border-radius: 3rem;
   background-color: #fff;
 }
-.Imagen__Producto img{
+
+.Imagen__Producto img {
   width: 60%;
   margin-top: 2.5%;
   height: auto;
   border-radius: 3rem;
 }
-.Titulo_Tienda{
+
+.Titulo_Tienda {
   color: #fff;
 }
 
@@ -610,28 +622,29 @@ body{
   left: 1.4rem;
   color: #fff;
 }
-.img_card_tienda{
+
+.img_card_tienda {
   width: 100%;
 }
 
-.tienda_edit{
+.tienda_edit {
   width: 80%;
   height: 15rem;
   margin-right: 10%;
   margin-left: 10%;
 }
 
-.splide{
+.splide {
   width: 90%;
-  margin: auto; 
+  margin: auto;
 }
 
-.splide__track{
+.splide__track {
   margin: 0 5rem;
   overflow: visible;
 }
 
-.splide__carta{
+.splide__carta {
   border-radius: 10px;
   width: 80%;
   text-align: center;
@@ -639,13 +652,14 @@ body{
   overflow: visible;
 
 }
-.splide__linea{
+
+.splide__linea {
   height: 3px;
   width: 80%;
   background-color: var(--amarillo);
 }
 
-.splide__img--wrapper{
+.splide__img--wrapper {
   background-color: #d9d9d9;
   width: 100%;
   height: 30rem;
@@ -653,7 +667,7 @@ body{
   border-radius: 50px;
 }
 
-.splide__img{
+.splide__img {
   width: 130%;
   position: absolute;
   left: -17%;
@@ -661,15 +675,15 @@ body{
   z-index: 10;
 }
 
-.splide__abajo--linea{
+.splide__abajo--linea {
   height: 3px;
   width: 70%;
   background-color: var(--amarillo-oscuro);
-  margin:2rem auto;
+  margin: 2rem auto;
   border-radius: 10px;
 }
 
-.splide__boton{
+.splide__boton {
   background-color: var(--amarillo-oscuro);
   outline: none;
   width: 50%;
@@ -683,13 +697,13 @@ body{
 
 }
 
-.splide__titulo{
+.splide__titulo {
   font-size: 2.5rem;
   letter-spacing: 2px;
   font-weight: 600;
 }
 
-.boton__tienda{
+.boton__tienda {
   margin: 1%;
   margin-top: 2%;
   background-color: var(--amarillo-oscuro);
@@ -707,7 +721,8 @@ body{
   font-family: 'Arial', sans-serif;
   margin: 20px;
 }
-.the h1{
+
+.the h1 {
   margin-left: 20%;
 }
 
@@ -727,18 +742,19 @@ td .escudo {
   height: auto;
   text-align: left;
 }
-.torneo__equipo{
+
+.torneo__equipo {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.torneo__equipo h3{
+.torneo__equipo h3 {
   text-align: center;
   font-size: 1.3rem;
 }
 
-.torneo__equipo img{
+.torneo__equipo img {
   margin-right: 10%;
 }
 
@@ -750,12 +766,12 @@ td {
 
 /* HISTORIAL */
 
-.historial{
+.historial {
   width: 60%;
   margin: 6rem auto;
 }
 
-.historial__header{
+.historial__header {
   background-color: var(--principal);
   color: #fff;
   padding: 1rem;
@@ -766,51 +782,51 @@ td {
 
 }
 
-.historial__logo{
+.historial__logo {
   width: 6.5%;
   margin-right: 1.5rem;
 }
 
-.historial__titulo{
+.historial__titulo {
   font-size: 3rem;
   letter-spacing: 1.2px;
 }
 
-.historial__partidos{
+.historial__partidos {
   border: 3px solid #c7c7c7;
   border-top: none;
   display: flex;
   flex-wrap: wrap;
 }
 
-.historial__partido{
+.historial__partido {
   padding: 2rem;
   width: 49.5%;
 }
 
-.partidoH__info{
+.partidoH__info {
   display: flex;
 }
 
-.partidoH__titulo{
+.partidoH__titulo {
   color: #575353;
 }
 
-.partidoH__equipos{
+.partidoH__equipos {
   width: 50%;
   border-right: 3px solid #c7c7c7;
 }
 
-.partidoH__equipo{
+.partidoH__equipo {
   display: flex;
 }
 
-.partidoH__equipo--wrapper{
+.partidoH__equipo--wrapper {
   display: flex;
   align-items: center;
 }
 
-.partidoH__logo{
+.partidoH__logo {
   width: 15%;
   margin-right: 1.5rem;
 }
@@ -820,12 +836,68 @@ td {
   font-weight: 600;
 }
 
-.partidoH__resultado{
+.partidoH__resultado {
   font-size: 1.8rem;
   font-family: 600;
 }
 
-.amarillo{
+.amarillo {
   background-color: rgb(241, 241, 135);
   border-color: black;
+}
+
+/* ESTADISTICAS  */
+
+.estadisticas{
+  display: flex;
+}
+
+.estadisticas__izquierda{
+  width: 60%;
+  margin-top: 10rem;
+}
+
+.estadisticas__derecha{
+  margin-top: 10rem;
+  width: 40%;
+}
+
+.estadisticas-grandes{
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+#estadisticas-primero{
+  text-align: start;
+  margin-left: 5.5rem;
+}
+
+.grandes__header, .chica__header, .chica__header-2 {
+  background-color: var(--principal);
+  color: #fff;
+}
+
+.grandes__estadisticas,
+.grandes__stats{
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+}
+
+.chica__estadisticas, .chica__header{
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+}
+
+.estadisticas__chica{
+  width: 70%;
+}
+
+.estadisticas__chica-2{
+  width: 70%;
+}
+
+.chica__header-2, .chica__estadisticas-2{
+  display: grid;
+  grid-template-columns: 3.5fr 1fr;
 }
