@@ -9,7 +9,7 @@ const supabase = createClient('https://thgcusmwbavdcuyotqxc.supabase.co', 'eyJhb
 // } );
 
 
-async function Listar(tabla){
+export async function Listar(tabla){
   const { data, error } = await supabase
   .from(tabla)
   .select()

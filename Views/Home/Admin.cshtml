@@ -3,14 +3,26 @@
 }
 
 
-<h1>Agregar partido de diarco</h1>
-<form id="formPartidoDiarco">
-    <h5>Rival</h5>
-    <input name="Rival" placeholder="Lasalete"/>
+<h1>Resultado partido de diarco</h1>
+
+    <h5>Partido</h5>
+    <select id="selectPartidoDiarco"></select>
     <h5>Goles a favor</h5>
-    <input name="GolesFavor" placeholder="99" id="golesfavor"/>
+    <input name="GolesFavor" placeholder="0" id="GolesFavor"/>
 
     <h5>Goles en contra</h5>
-    <input name="GolesFavor" placeholder="99"/>
-</form>
-<button id="submitPartidoDiarco"></button>
+    <input name="GolesContra" placeholder="0" id="GolesContra"/>
+    <button id="submitPartidoDiarco">subir</button>
+
+<h1>resultado partido NO diarco</h1>
+    <h5>Partido</h5>
+    <select id="selectPartido"></select>
+    <h5>Goles del equipo 1</h5>
+    <input name="GolesRival1" placeholder="0" id="GolesRival1"/>
+
+    <h5>Goles del equipo 2</h5>
+    <input name="GolesRival2" placeholder="0" id="GolesRival2"/>
+    <button id="submitPartido">subir</button>
+<script src="~/js/admin.js" type="module"></script>
+
+

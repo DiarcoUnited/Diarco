@@ -5,6 +5,8 @@ html {
 }
 
 
+
+
 :root {
   --oscuro: #1B003A;
   --principal: #47297B;
@@ -19,7 +21,7 @@ a {
 }
 
 *,
-ul {
+ul, h2 {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -873,6 +875,13 @@ td {
   margin-left: 5.5rem;
 }
 
+.grandes__titulo{
+  text-align: start;
+  font-size: 1.4  rem;
+  color: var(--principal);
+  font-weight: 700;
+}
+
 .grandes__header, .chica__header, .chica__header-2 {
   background-color: var(--principal);
   color: #fff;
@@ -900,4 +909,64 @@ td {
 .chica__header-2, .chica__estadisticas-2{
   display: grid;
   grid-template-columns: 3.5fr 1fr;
+}
+
+.estadisticas-totales{
+  width: 70%;
+  margin: auto;
+}
+
+.totales__cuadrados{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.totales__tituloP{
+  background-color: var(--principal);
+  color: #f7f7f7;
+  padding: .4rem;
+}
+
+.totales__titulo{
+  font-size: 4rem;
+  color: var(--principal);
+  font-weight: 300;
+}
+
+.totales__subtitulo{
+  font-size: 1.5rem;
+  color: var(--principal);
+  font-weight: 300;
+}
+
+.totales__subtitulo--logo{
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--principal);
+}
+
+.totales__img{
+  width: 5rem;
+}
+
+.mr-1{
+  margin-right: .4rem;
+}
+
+.mb-1{
+  margin-bottom: 1rem;
+}
+
+.totales__cuadrado{
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.estadisticas-grandes, .estadisticas__chica-2{
+  margin-top: 3rem;
 }
