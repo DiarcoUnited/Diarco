@@ -2,27 +2,33 @@
     ViewData["Title"] = "DIARCO UNITED";
 }
 
-
-<h1>Resultado partido de diarco</h1>
-
+<div class="forms__admin">
+<h1 class="resultado__admin">Resultado partido de diarco</h1>   
+<div class="nombres__admin">
     <h5>Partido</h5>
-    <select id="selectPartidoDiarco"></select>
     <h5>Goles a favor</h5>
-    <input name="GolesFavor" placeholder="0" id="GolesFavor"/>
-
     <h5>Goles en contra</h5>
+</div>
+<div class="nombres__admin">
+    <select id="selectPartidoDiarco"></select>
+    <input name="GolesFavor" placeholder="0" id="GolesFavor"/>
     <input name="GolesContra" placeholder="0" id="GolesContra"/>
+</div>
     <button id="submitPartidoDiarco">subir</button>
+<h1 class="resultado__admin">Resultado partido NO diarco</h1>
 
-<h1>resultado partido NO diarco</h1>
-    <h5>Partido</h5>
+    <div class="nombres__admin">
+        <h5 class="titulo__admin">Partido </h5>
+        <h5 class="titulo__admin">Goles del equipo 1 </h5>
+        <h5 class="titulo__admin">Goles del equipo 2 </h5>
+    </div>
+    <div class="nombres__admin">
     <select id="selectPartido"></select>
-    <h5>Goles del equipo 1</h5>
     <input name="GolesRival1" placeholder="0" id="GolesRival1"/>
-
-    <h5>Goles del equipo 2</h5>
     <input name="GolesRival2" placeholder="0" id="GolesRival2"/>
-    <button id="submitPartido">subir</button>
-<script src="~/js/admin.js" type="module"></script>
+    </div>
 
+    <button id="submitPartido" class="subir_admin">subir</button>
+</div>
+<script src="~/js/admin.js" type="module"></script>
 

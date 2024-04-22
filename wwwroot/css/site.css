@@ -970,3 +970,24 @@ td {
 .estadisticas-grandes, .estadisticas__chica-2{
   margin-top: 3rem;
 }
+
+.div__admin{
+  display: flex;
+  justify-content: center;
+
+}
+
+.resultado__admin{
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.nombres__admin{
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
+}
+.forms__admin{
+}
+
+

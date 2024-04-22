@@ -25,6 +25,14 @@ async function ListarPartidos(){
   return data;
 }
 
+export async function ListarJugadores(columna){
+  const { data, error } = await supabase
+  .from('Jugador')
+  .select()
+  .order(columna,{ascending:false})
+  return data;
+}
+
 async function ListarRivalesTorneo(tabla,idTorneo){
   const { data, error } = await supabase
   .from(tabla)

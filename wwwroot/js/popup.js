@@ -5,6 +5,7 @@ const diasHtml = document.getElementById("dias")
 const horasHtml = document.getElementById("horas")
 const minutosHtml = document.getElementById("minutos")
 const segundosHtml = document.getElementById("segundos")
+// const sabadoHtml = document.getElementById("sabado")
 
 
 botonx.addEventListener('click', () => {
@@ -52,3 +53,10 @@ setInterval(actualizarContador, 1000);
 
 // Iniciar el contador al cargar la pagina
 actualizarContador();
+
+// function Sabado(){
+//   var ahora = new Date();
+//   var proximoSabado = obtenerSabado();
+//   var sabadoPartido = proximoSabado.getTime() + ahora.getTime();
+//   sabadoHtml.textContent = sabadoPartido;
+// }

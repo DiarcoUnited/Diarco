@@ -5,24 +5,24 @@
             <h2 class="totales__tituloP">Estadisticas Totales</h2>
             <div class="totales__cuadrados">
             <div class="totales__cuadrado mr-1 mb-1">
-                <h2 class="totales__titulo">69</h2>
+                <h2 class="totales__titulo" id="Partidos_jugados">0</h2>
                 <h5 class="totales__subtitulo">Partidos Jugados</h5>
             </div>
             <div class="totales__cuadrado mr-1 mb-1">
-                <h2 class="totales__titulo">69</h2>
-                <h5 class="totales__subtitulo">Partidos Jugados</h5>
+                <h2 class="totales__titulo" id="Partidos_ganados">0</h2>
+                <h5 class="totales__subtitulo">Partidos ganados</h5>
             </div>
             <div class="totales__cuadrado mb-1">
-                <h2 class="totales__titulo">69</h2>
-                <h5 class="totales__subtitulo">Partidos Jugados</h5>
+                <h2 class="totales__titulo" id="Partidos_empatados">0</h2>
+                <h5 class="totales__subtitulo">Partidos empatados</h5>
             </div>
             <div class="totales__cuadrado mr-1">
-                <h2 class="totales__titulo">69</h2>
-                <h5 class="totales__subtitulo">Partidos Jugados</h5>
+                <h2 class="totales__titulo" id="Partidos_perdidos">0</h2>
+                <h5 class="totales__subtitulo">Partidos perdidos</h5>
             </div>
             <div class="totales__cuadrado mr-1">
-                <h2 class="totales__titulo">69</h2>
-                <h5 class="totales__subtitulo">Partidos Jugados</h5>
+                <h2 class="totales__titulo" id="Porcentaje_victorias">0%</h2>
+                <h5 class="totales__subtitulo">porcentaje de victorias</h5>
             </div>
             <div class="totales__cuadrado">
                 <img src="~/assets/escudo.png" alt="logo" class="totales__img"/>
@@ -34,7 +34,7 @@
         <div class="estadisticas-grandes">
             <h3 class="grandes__titulo">Goles Totales</h3>
             <div class="grandes__header">
-                <div class="grandes__stats">
+                <div class="grandes__stats" >
                     <h3 class="grandes__stat" id="estadisticas-primero" id="estadisticas-primero">Sede</h3>
                     <h3 class="grandes__stat">A favor</h3>
                     <h3 class="grandes__stat">En contra</h3>
@@ -42,7 +42,7 @@
                     <h3 class="grandes__stat">PG</h3>
                 </div>
             </div>
-            <div class="grandes__estadisticas">
+            <div class="grandes__estadisticas" id="estadisticas__golesTotales">
                     <h3 class="grandes__stat" id="estadisticas-primero">Sede</h3>
                     <h3 class="grandes__stat">A favor</h3>
                     <h3 class="grandes__stat">En contra</h3>
@@ -68,17 +68,7 @@
                     <h3 class="grandes__stat">PG</h3>
                 </div>
             </div>
-            <div class="grandes__estadisticas">
-                    <h3 class="grandes__stat goleadores__nombre" id="estadisticas-primero">Sede</h3>
-                    <h3 class="grandes__stat goleadores__goles">A favor</h3>
-                    <h3 class="grandes__stat goleadores__enContra">En contra</h3>
-                    <h3 class="grandes__stat goleadores__dif">Dif</h3>
-                    <h3 class="grandes__stat goleadores__pg">PG</h3>
-                    <h3 class="grandes__stat goleadores__nombre" id="estadisticas-primero">Sede</h3>
-                    <h3 class="grandes__stat goleadores__goles">A favor</h3>
-                    <h3 class="grandes__stat goleadores__enContra">En contra</h3>
-                    <h3 class="grandes__stat goleadores__dif">Dif</h3>
-                    <h3 class="grandes__stat goleadores__pg">PG</h3>
+            <div class="grandes__estadisticas" id="grandes__estadisticas--goleadores">
             </div>
         
         </div>
@@ -98,15 +88,8 @@
                 <h3 class="chica__stat">Total</h3>
             </div>
 
-            <div class="chica__estadisticas">
-                <h3 class="chicas__stat">PG</h3>
-                <h3 class="chicas__stat">PG</h3>
-                <h3 class="chicas__stat">PG</h3>
-                <h3 class="chicas__stat">PG</h3>
-                <h3 class="chicas__stat">PG</h3>
-                <h3 class="chicas__stat">PG</h3>
-                <h3 class="chicas__stat">PG</h3>
-                <h3 class="chicas__stat">PG</h3>
+            <div class="chica__estadisticas" id="chica__estadisticas_partidos">
+
             </div>
         </div>
 
@@ -119,36 +102,11 @@
                 <h3 class="chica__stat">Total</h3>
             </div>
 
-            <div class="chica__estadisticas-2">
-                <h3 class="chicas__stat">PG</h3>
-                <h3 class="chicas__stat">PG</h3>
-                <h3 class="chicas__stat">PG</h3>
-                <h3 class="chicas__stat">PG</h3>
-                <h3 class="chicas__stat">PG</h3>
-                <h3 class="chicas__stat">PG</h3>
-                <h3 class="chicas__stat">PG</h3>
-                <h3 class="chicas__stat">PG</h3>
+            <div class="chica__estadisticas-2" id="chica__estadisticas--amarillas">
+
             </div>
         </div>
 
-        <div class="estadisticas__chica-2">
-            <h3 class="grandes__titulo">Goles en contra</h3> 
-            <div class="chica__header-2">
-                <h3 class="chica__stat">Jugadores</h3>
-                <h3 class="chica__stat">Total</h3>
-            </div>
-
-            <div class="chica__estadisticas-2">
-                <h3 class="chicas__stat">PG</h3>
-                <h3 class="chicas__stat">PG</h3>
-                <h3 class="chicas__stat">PG</h3>
-                <h3 class="chicas__stat">PG</h3>
-                <h3 class="chicas__stat">PG</h3>
-                <h3 class="chicas__stat">PG</h3>
-                <h3 class="chicas__stat">PG</h3>
-                <h3 class="chicas__stat">PG</h3>
-            </div>
-        </div>
 
     </div>
 
